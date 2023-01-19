@@ -7,10 +7,10 @@
 
 import UIKit
 
-public class SettingTableViewCell: UITableViewCell {
+public class SettingAccountTableViewCell: UITableViewCell {
     
     
-    static let identifier = "SettingTableViewCell"
+    static let identifier = "SettingAccountTableViewCell"
     
     private let iconContainer: UIView = {
        let view = UIView()
@@ -27,12 +27,20 @@ public class SettingTableViewCell: UITableViewCell {
         return imageView
     }()
     
-    private let label: UILabel = {
+    private let labelFullname: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .white
         return label
     }()
+    
+    private let labelEmail: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 1
+        label.textColor = .white
+        return label
+    }()
+    
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -41,9 +49,12 @@ public class SettingTableViewCell: UITableViewCell {
         contentView.superview?.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
         //contentView.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
         
-        contentView.addSubview(label)
+        contentView.addSubview(labelFullname)
+        contentView.addSubview(labelEmail)
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(IconImageView)
+   //     contentView.frame.size.width = 77
+        
         
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
@@ -59,14 +70,20 @@ public class SettingTableViewCell: UITableViewCell {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
+        contentView.frame.size.height = 77
         let size = contentView.frame.size.height - 12
         iconContainer.frame = CGRect(x: 16, y: 6, width: size, height: size)
         
         let imageSize = size/1.5
-        IconImageView.frame = CGRect(x: (size - imageSize)/2, y: (size - imageSize)/2, width: imageSize, height: imageSize)
+        IconImageView.frame = CGRect(x: 6, y: 8, width: imageSize, height: imageSize)
         
         
-        label.frame = CGRect(x: 32 + iconContainer.frame.size.width,
+        labelFullname.frame = CGRect(x: 52 + iconContainer.frame.size.width,
+                             y: -3,
+                             width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
+                             height: contentView.frame.size.height)
+        
+        labelEmail.frame = CGRect(x: 32 + iconContainer.frame.size.width,
                              y: 3,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: contentView.frame.size.height)
@@ -75,12 +92,14 @@ public class SettingTableViewCell: UITableViewCell {
     public override func prepareForReuse() {
         super.prepareForReuse()
         IconImageView.image = nil
-        label.text = nil
+        labelFullname.text = nil
+        labelEmail.text = nil
         iconContainer.backgroundColor = nil
     }
     
-    func configure(with model: SettingsOption) {
-        label.text = model.title
+    func configure(with model: SettingsAccountOption) {
+        labelFullname.text = model.fullName
+        labelEmail.text = model.emailAddress
         IconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroundColor
     }

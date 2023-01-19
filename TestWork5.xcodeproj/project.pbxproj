@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1B65402979E5D000AB9ACE /* SettingAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B653F2979E5D000AB9ACE /* SettingAccountTableViewCell.swift */; };
+		5A1B65422979E5E800AB9ACE /* SettingButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B65412979E5E800AB9ACE /* SettingButtonTableViewCell.swift */; };
 		5AD991E22978939300EA8627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD991E12978939300EA8627 /* AppDelegate.swift */; };
 		5AD991E42978939300EA8627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD991E32978939300EA8627 /* SceneDelegate.swift */; };
 		5AD991E62978939300EA8627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD991E52978939300EA8627 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A1B653F2979E5D000AB9ACE /* SettingAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountTableViewCell.swift; sourceTree = "<group>"; };
+		5A1B65412979E5E800AB9ACE /* SettingButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5AD991DE2978939300EA8627 /* TestWork5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWork5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD991E12978939300EA8627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AD991E32978939300EA8627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				5AD991E12978939300EA8627 /* AppDelegate.swift */,
 				5AD991E32978939300EA8627 /* SceneDelegate.swift */,
 				5AD991F52978A0A900EA8627 /* SettingTableViewCell.swift */,
+				5A1B653F2979E5D000AB9ACE /* SettingAccountTableViewCell.swift */,
+				5A1B65412979E5E800AB9ACE /* SettingButtonTableViewCell.swift */,
 				5AD991E52978939300EA8627 /* ViewController.swift */,
 				5AD991E72978939300EA8627 /* Main.storyboard */,
 				5AD991EA2978939300EA8627 /* Assets.xcassets */,
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1B65402979E5D000AB9ACE /* SettingAccountTableViewCell.swift in Sources */,
 				5AD991E62978939300EA8627 /* ViewController.swift in Sources */,
 				5AD991E22978939300EA8627 /* AppDelegate.swift in Sources */,
 				5AD991F62978A0A900EA8627 /* SettingTableViewCell.swift in Sources */,
+				5A1B65422979E5E800AB9ACE /* SettingButtonTableViewCell.swift in Sources */,
 				5AD991E42978939300EA8627 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
