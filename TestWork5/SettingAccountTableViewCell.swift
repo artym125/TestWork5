@@ -8,9 +8,8 @@
 import UIKit
 
 public class SettingAccountTableViewCell: UITableViewCell {
-    
-    
     static let identifier = "SettingAccountTableViewCell"
+    
     
     private let iconContainer: UIView = {
        let view = UIView()
@@ -44,7 +43,7 @@ public class SettingAccountTableViewCell: UITableViewCell {
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        super.init(style: style , reuseIdentifier: reuseIdentifier)
         
         contentView.superview?.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
         //contentView.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
@@ -53,8 +52,7 @@ public class SettingAccountTableViewCell: UITableViewCell {
         contentView.addSubview(labelEmail)
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(IconImageView)
-   //     contentView.frame.size.width = 77
-        
+        labelFullname.font = UIFont(name: "SF-Pro-Display-Regular", size: 33)
         
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
@@ -70,23 +68,25 @@ public class SettingAccountTableViewCell: UITableViewCell {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame.size.height = 77
-        let size = contentView.frame.size.height - 12
-        iconContainer.frame = CGRect(x: 16, y: 6, width: size, height: size)
         
-        let imageSize = size/1.5
-        IconImageView.frame = CGRect(x: 6, y: 8, width: imageSize, height: imageSize)
+
+        iconContainer.frame = CGRect(x: 16, y: 8.5, width: 60, height: 60)
+        
+
+        IconImageView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
         
         
-        labelFullname.frame = CGRect(x: 52 + iconContainer.frame.size.width,
-                             y: -3,
+        labelFullname.frame = CGRect(x: 89,
+                             y: 14,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
-                             height: contentView.frame.size.height)
-        
-        labelEmail.frame = CGRect(x: 32 + iconContainer.frame.size.width,
-                             y: 3,
-                             width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
-                             height: contentView.frame.size.height)
+                             height: 28)
+        labelFullname.font = labelFullname.font.withSize(22)
+//        labelFullname.font = UIFont(name: "SF-Pro-Display-Regular", size: 33)
+        labelEmail.frame = CGRect(x: 89,
+                                  y: 44,
+                                  width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
+                                  height: 18)
+        labelEmail.font = labelEmail.font.withSize(13)
     }
     
     public override func prepareForReuse() {

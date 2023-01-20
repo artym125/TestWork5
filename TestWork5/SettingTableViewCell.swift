@@ -18,6 +18,7 @@ public class SettingTableViewCell: UITableViewCell {
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         return view
+        
     }()
     
     private let IconImageView: UIImageView = {
@@ -56,7 +57,7 @@ public class SettingTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
-    
+    // ПЕРЕРОБИТИ РОЗМІРИ!
     public override func layoutSubviews() {
         super.layoutSubviews()
         let size = contentView.frame.size.height - 12
@@ -65,7 +66,7 @@ public class SettingTableViewCell: UITableViewCell {
         let imageSize = size/1.5
         IconImageView.frame = CGRect(x: (size - imageSize)/2, y: (size - imageSize)/2, width: imageSize, height: imageSize)
         
-        
+        label.font = label.font.withSize(17)
         label.frame = CGRect(x: 32 + iconContainer.frame.size.width,
                              y: 3,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
