@@ -10,7 +10,6 @@ import UIKit
 public class SettingAccountTableViewCell: UITableViewCell {
     static let identifier = "SettingAccountTableViewCell"
     
-    
     private let iconContainer: UIView = {
        let view = UIView()
         view.clipsToBounds = true
@@ -40,25 +39,16 @@ public class SettingAccountTableViewCell: UITableViewCell {
         return label
     }()
     
-    
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style , reuseIdentifier: reuseIdentifier)
         
         contentView.superview?.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
-        //contentView.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
-        
         contentView.addSubview(labelFullname)
         contentView.addSubview(labelEmail)
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(IconImageView)
-        labelFullname.font = UIFont(name: "SF-Pro-Display-Regular", size: 33)
-        
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
-        
-        
-        
     }
     
     
@@ -69,7 +59,6 @@ public class SettingAccountTableViewCell: UITableViewCell {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-
         iconContainer.frame = CGRect(x: 16, y: 8.5, width: 60, height: 60)
         
 
@@ -81,7 +70,6 @@ public class SettingAccountTableViewCell: UITableViewCell {
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: 28)
         labelFullname.font = labelFullname.font.withSize(22)
-//        labelFullname.font = UIFont(name: "SF-Pro-Display-Regular", size: 33)
         labelEmail.frame = CGRect(x: 89,
                                   y: 44,
                                   width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
@@ -103,7 +91,6 @@ public class SettingAccountTableViewCell: UITableViewCell {
         IconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroundColor
     }
-    
     
     
 }

@@ -8,8 +8,6 @@
 import UIKit
 
 public class SettingTableViewCell: UITableViewCell {
-    
-    
     static let identifier = "SettingTableViewCell"
     
     private let iconContainer: UIView = {
@@ -18,7 +16,6 @@ public class SettingTableViewCell: UITableViewCell {
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         return view
-        
     }()
     
     private let IconImageView: UIImageView = {
@@ -35,37 +32,26 @@ public class SettingTableViewCell: UITableViewCell {
         return label
     }()
     
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         contentView.superview?.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
-        //contentView.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.1098039216, blue: 0.1176470588, alpha: 1)
-        
         contentView.addSubview(label)
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(IconImageView)
-        
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
-        
-        
-        
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError()
     }
-    // ПЕРЕРОБИТИ РОЗМІРИ!
+
     public override func layoutSubviews() {
         super.layoutSubviews()
-        let size = contentView.frame.size.height - 12
-        iconContainer.frame = CGRect(x: 16, y: 6, width: size, height: size)
-        
+        let size = 32.0
+        iconContainer.frame = CGRect(x: 16, y: 12, width: size, height: size)
         let imageSize = size/1.5
         IconImageView.frame = CGRect(x: (size - imageSize)/2, y: (size - imageSize)/2, width: imageSize, height: imageSize)
-        
         label.font = label.font.withSize(17)
         label.frame = CGRect(x: 32 + iconContainer.frame.size.width,
                              y: 3,

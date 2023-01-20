@@ -10,19 +10,18 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .insetGrouped)
         table.register(SettingTableViewCell.self,
                        forCellReuseIdentifier: SettingTableViewCell.identifier)
         table.register(SettingAccountTableViewCell.self,
                        forCellReuseIdentifier: SettingAccountTableViewCell.identifier)
+        table.register(SettingButtonTableViewCell.self,
+                       forCellReuseIdentifier: SettingButtonTableViewCell.identifier)
         return table
     }()
     
     var models = [Section]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         tableView.frame = view.bounds
         tableView.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.1882352941, blue: 0.1921568627, alpha: 1)
-        
     }
     
     func configure() {
@@ -56,18 +54,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
                 .generalCell(model: SettingsOption(title: "Privacy Policy", icon: #imageLiteral(resourceName: "Subtract"), iconBackgroundColor: #colorLiteral(red: 0.2784313725, green: 0.4549019608, blue: 0.8862745098, alpha: 1)))
         ]))
-
+        
         models.append(Section(title: "BugSetting", options: [
             .generalCell(model: SettingsOption(title: "Report a bug", icon: #imageLiteral(resourceName: "Report a bug"), iconBackgroundColor: #colorLiteral(red: 0.8549019608, green: 0.3803921569, blue: 0.3607843137, alpha: 1)))
         ]))
-
-        //
-        //        models.append(Section(title: "Button", options: [
-        //            SettingsOption(title: "Music Premium", icon: UIImage(systemName: "bolt"), iconBackgroundColor: .systemBlue){
-        //
-        //            }
-        //        ]))
-        //
+        models.append(Section(title: "Button", options: [
+            .buttonCell(model: SettingsButtonOption(title: "Music Premium", icon: #imageLiteral(resourceName: "Music Premium"), iconBackgroundColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+        ]))
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -87,7 +80,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.section].options[indexPath.row]
-        
         
         switch model.self {
         case .accountCell(let model):
@@ -110,21 +102,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configure(with: model)
             return cell
         case .buttonCell(let model):
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SettingButtonTableViewCell.identifier,
+                for: indexPath
+            ) as? SettingButtonTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.configure(with: model)
+            return cell
         }
-//        return UITableViewCell()
-        
-        //      guard let cell = tableView.dequeueReusableCell(
-        //            withIdentifier: SettingTableViewCell.identifier,
-        //            for: indexPath
-        //        ) as? SettingTableViewCell else {
-        //            return UITableViewCell()
-        //        }
-        //        cell.configure(with: model)
-        //        return cell
-        //    }
-        
-        
     }
     
 }

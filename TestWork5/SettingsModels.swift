@@ -30,13 +30,14 @@ struct SettingsAccountOption {
 }
 
 struct SettingsButtonOption {
-    let icon: UIImage?
+//    let button: UIButton
     let title: String
+    let icon: UIImage?
+    let iconBackgroundColor: UIColor?
 }
 
 struct SettingsOption {
     let title: String
     let icon: UIImage?
     let iconBackgroundColor: UIColor?
-//    let handler: (() -> Void)
 }
