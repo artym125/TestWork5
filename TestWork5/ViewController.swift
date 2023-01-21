@@ -78,6 +78,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return models.count
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return " "
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 18
+        } else if section == 1 {
+            return 16
+        } else if section == 2 {
+            return 16
+        } else if section == 3 {
+            return 16
+        } else if section == 4 {
+            return 37
+        }
+            return 16
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.section].options[indexPath.row]
         
@@ -90,7 +109,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return UITableViewCell()
             }
             cell.configure(with: model)
-            
             return cell
         case .generalCell(let model):
             guard let cell = tableView.dequeueReusableCell(

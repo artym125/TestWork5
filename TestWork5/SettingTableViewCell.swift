@@ -29,6 +29,7 @@ public class SettingTableViewCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .white
+        label.font = UIFont(name: "Roboto Regular", size: 17)
         return label
     }()
     
@@ -52,7 +53,6 @@ public class SettingTableViewCell: UITableViewCell {
         iconContainer.frame = CGRect(x: 16, y: 12, width: size, height: size)
         let imageSize = size/1.5
         IconImageView.frame = CGRect(x: (size - imageSize)/2, y: (size - imageSize)/2, width: imageSize, height: imageSize)
-        label.font = label.font.withSize(17)
         label.frame = CGRect(x: 32 + iconContainer.frame.size.width,
                              y: 3,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,

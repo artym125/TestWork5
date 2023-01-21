@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		5A1B65402979E5D000AB9ACE /* SettingAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B653F2979E5D000AB9ACE /* SettingAccountTableViewCell.swift */; };
 		5A1B65422979E5E800AB9ACE /* SettingButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B65412979E5E800AB9ACE /* SettingButtonTableViewCell.swift */; };
-		5A1B6545297A0FE200AB9ACE /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B6544297A0FE200AB9ACE /* SF-Pro-Display-Regular.otf */; };
+		5A1B6545297A0FE200AB9ACE /* SF.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B6544297A0FE200AB9ACE /* SF.otf */; };
 		5A1B6547297A193300AB9ACE /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B6546297A193300AB9ACE /* SettingsModels.swift */; };
+		5A27B887297B3B3600F82391 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A27B886297B3B3600F82391 /* SF-Pro-Display-Bold.otf */; };
+		5A27B889297B3BDF00F82391 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A27B888297B3BDF00F82391 /* Roboto-Regular.ttf */; };
+		5A27B88B297B3D1A00F82391 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A27B88A297B3D1A00F82391 /* SF-Pro-Text-Regular.otf */; };
+		5A5B09D1297B4768006C5D50 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5B09D0297B4768006C5D50 /* SF-Pro-Text-Semibold.otf */; };
 		5AD991E22978939300EA8627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD991E12978939300EA8627 /* AppDelegate.swift */; };
 		5AD991E42978939300EA8627 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD991E32978939300EA8627 /* SceneDelegate.swift */; };
 		5AD991E62978939300EA8627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD991E52978939300EA8627 /* ViewController.swift */; };
@@ -23,8 +27,12 @@
 /* Begin PBXFileReference section */
 		5A1B653F2979E5D000AB9ACE /* SettingAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountTableViewCell.swift; sourceTree = "<group>"; };
 		5A1B65412979E5E800AB9ACE /* SettingButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingButtonTableViewCell.swift; sourceTree = "<group>"; };
-		5A1B6544297A0FE200AB9ACE /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		5A1B6544297A0FE200AB9ACE /* SF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF.otf; sourceTree = "<group>"; };
 		5A1B6546297A193300AB9ACE /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
+		5A27B886297B3B3600F82391 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		5A27B888297B3BDF00F82391 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		5A27B88A297B3D1A00F82391 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		5A5B09D0297B4768006C5D50 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		5AD991DE2978939300EA8627 /* TestWork5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWork5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD991E12978939300EA8627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AD991E32978939300EA8627 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +85,11 @@
 				5AD991EA2978939300EA8627 /* Assets.xcassets */,
 				5AD991EC2978939300EA8627 /* LaunchScreen.storyboard */,
 				5AD991EF2978939300EA8627 /* Info.plist */,
-				5A1B6544297A0FE200AB9ACE /* SF-Pro-Display-Regular.otf */,
+				5A1B6544297A0FE200AB9ACE /* SF.otf */,
+				5A27B886297B3B3600F82391 /* SF-Pro-Display-Bold.otf */,
+				5A27B888297B3BDF00F82391 /* Roboto-Regular.ttf */,
+				5A27B88A297B3D1A00F82391 /* SF-Pro-Text-Regular.otf */,
+				5A5B09D0297B4768006C5D50 /* SF-Pro-Text-Semibold.otf */,
 			);
 			path = TestWork5;
 			sourceTree = "<group>";
@@ -140,10 +152,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A27B889297B3BDF00F82391 /* Roboto-Regular.ttf in Resources */,
 				5AD991EE2978939300EA8627 /* LaunchScreen.storyboard in Resources */,
+				5A27B887297B3B3600F82391 /* SF-Pro-Display-Bold.otf in Resources */,
 				5AD991EB2978939300EA8627 /* Assets.xcassets in Resources */,
-				5A1B6545297A0FE200AB9ACE /* SF-Pro-Display-Regular.otf in Resources */,
+				5A5B09D1297B4768006C5D50 /* SF-Pro-Text-Semibold.otf in Resources */,
+				5A1B6545297A0FE200AB9ACE /* SF.otf in Resources */,
 				5AD991E92978939300EA8627 /* Main.storyboard in Resources */,
+				5A27B88B297B3D1A00F82391 /* SF-Pro-Text-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

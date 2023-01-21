@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 public class SettingButtonTableViewCell: UITableViewCell {
     static let identifier = "SettingButtonTableViewCell"
@@ -29,8 +30,11 @@ public class SettingButtonTableViewCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .white
+        label.font = UIFont.init(name: "SF Pro Display Bold", size: 22)
         return label
     }()
+    
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style , reuseIdentifier: reuseIdentifier)
@@ -39,7 +43,7 @@ public class SettingButtonTableViewCell: UITableViewCell {
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(IconImageView)
         contentView.clipsToBounds = true
-        accessoryType = .none
+        
     }
     
     required init?(coder: NSCoder) {
@@ -60,7 +64,9 @@ public class SettingButtonTableViewCell: UITableViewCell {
                              y: 15.5,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: 25)
-        label.font = label.font.withSize(22)
+//        label.font = UIFont(name: "SF Pro Display Bold", size: 22)
+ //       label.font = label.font.withSize(22)
+ //       label.font.fo = "SF-Pro-Display-Regular.otf"
 
     }
     
@@ -73,6 +79,7 @@ public class SettingButtonTableViewCell: UITableViewCell {
     
     func configure(with model: SettingsButtonOption) {
         label.text = model.title
+        label.font = UIFont(name: "SF Pro Display Bold", size: 23)
         IconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroundColor
     }

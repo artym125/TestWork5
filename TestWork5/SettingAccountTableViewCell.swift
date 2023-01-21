@@ -29,6 +29,7 @@ public class SettingAccountTableViewCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .white
+        label.font = UIFont.init(name: "SF Pro Display Regular", size: 22)
         return label
     }()
     
@@ -36,6 +37,7 @@ public class SettingAccountTableViewCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.textColor = .white
+        label.font = UIFont(name: "SF Pro Text Regular", size: 13)
         return label
     }()
     
@@ -69,12 +71,10 @@ public class SettingAccountTableViewCell: UITableViewCell {
                              y: 14,
                              width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                              height: 28)
-        labelFullname.font = labelFullname.font.withSize(22)
         labelEmail.frame = CGRect(x: 89,
                                   y: 44,
                                   width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
                                   height: 18)
-        labelEmail.font = labelEmail.font.withSize(13)
     }
     
     public override func prepareForReuse() {
